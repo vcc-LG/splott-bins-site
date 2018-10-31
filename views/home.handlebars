@@ -1,0 +1,15 @@
+<h1>Splott bins</h1>
+
+
+<ul class="bin_list">
+  {{#each data}}
+    <li>Bin night: {{this.date_day_before_formatted}}</li>
+  {{#each this.bins}}
+    <li>Bins: {{this}}</li>
+{{/each}}
+  {{/each}}
+</ul>
+ 
+ {{#if noData}}
+    <h1>Couldn't find bin data</h1>
+  {{/if}}
